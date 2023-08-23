@@ -6,16 +6,11 @@
 
 import pandas as pd
 import numpy as np
-import seaborn as sn
 import plotly.express as px
 import dash
 from dash import dcc
 from dash import html
 from dash.dependencies import Input, Output
-import bar_chart_race as bcr
-from raceplotly.plots import barplot
-import warnings
-warnings.filterwarnings('ignore')
 import dash_bootstrap_components as dbc
 covid_dataset=pd.read_csv('C:/Users/navan/Downloads/OxCGRT_summary20200520.csv')
 country_continent_dataset=pd.read_csv('C:/Users/navan/Downloads/country-and-continent.csv')
