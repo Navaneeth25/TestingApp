@@ -41,8 +41,6 @@ fillna_values['date'] = pd.to_datetime(fillna_values['Date'], format='%Y%m%d')
 fig1=px.line(df3,x='Date',y='ConfirmedCases',log_y=True,color='CountryName')
 fig2=px.sunburst(fillna_values, color='StringencyIndex', values='ConfirmedCases',
                 path=['Continent_Name','CountryName'])
-fig3 = barplot(fillna_values,  item_column='CountryName', value_column='ConfirmedCases', time_column='Date')
-fig3.plot(item_label = 'Top Country', value_label = 'cases', frame_duration = 600)
 fig4 = px.treemap(fillna_values, path=[px.Constant('world'), 'Continent_Name','CountryName',], values='ConfirmedCases',
                   color='StringencyIndex', hover_data=['CountryName'])
 fig5 = px.scatter_geo(fillna_values, locations="CountryCode", color="Continent_Name",hover_name="CountryName", 
