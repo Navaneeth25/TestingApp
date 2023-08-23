@@ -70,6 +70,7 @@ sidebar = html.Div(
     ]
 )
 app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
+server=app.server
 app.layout = html.Div(children =[
                     dbc.Row(
                     [dbc.Col(sidebar,width=2,style={"height": "35vh"}),
